@@ -1,0 +1,42 @@
+  <div class="loading-spiner-holder" data-loading>
+    <div>
+      <img src="img/load.gif" />
+      <span>cargando...</span>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <h1>Estadísticas</h1>
+    <div ng-show="role==2" class="row">
+      <div class="form-group">
+        <label class="col-md-2"> Seleccione Comisión </label>
+        <div class="col-md-4">
+          <select id="comisiones" ng-options="c.comision as c.comision for c in numComisiones" ng-model="numComisiones.comision"
+            name="comision" class="form-control" required>
+          </select>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <div class="row">
+
+      <h3 ng-show="role==0">Comisión {{comision}}</h3>
+      <hr>
+      <h4>Total Alumnos en esta comisión: {{result.total}}</h4>
+      <h4>Total Alumnos Postulados: {{postulantes}} {{totalPostulantes}}</h4>
+    </div>
+
+    <div class="list-group">
+      <div class="list-group-item" ng-repeat="e in estadisticas">
+        {{e.alumno}} <span class="badge">Votos: {{e.votos}}</span>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width:{{(e.votos/result.total*100)|number:0}}%"
+            aria-valuemin="{{e.votos}}" aria-valuemax="{{result.total}}" style="width:70%">
+          {{(e.votos/result.total*100)|number:2}}%
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>

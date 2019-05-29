@@ -1,0 +1,35 @@
+<div class="loading-spiner-holder" data-loading>
+    <div>
+        <img src="img/load.gif" />
+        <span>cargando...</span>
+    </div>
+</div>
+<div class="container-fluid">
+    <h1>Comisiones</h1>
+    <div class="row">
+        <form class="form-group">
+            <div class="col-sm-3">
+                <label>Filtro:</label><input class="form-control" type="text" name="apellido" ng-model="alumno"
+                    placeholder="ingrese el número de comisión"/>
+            </div>
+        </form>
+        <div class="col-sm-9">
+            <a class="btn btn-default navbar-btn" role="button" href="#/edit-alumno/0"><span class="glyphicon glyphicon-plus"></span>&nbsp;Agregar Alumno</a>
+        </div>
+    </div>
+<p>&nbsp;</p>
+
+    <div class="row">
+
+<div ng-repeat="data in comisiones | filter: alumno  | orderBy:'comision' | groupBy:'comision'" repeat-end="
+    onEnd()">
+<h3 ng-show="data.comision_CHANGED">Comisión {{data.comision}} <span class="badge">Alumnos: </span></h3>
+<hr>
+
+    {{data.alumno}}
+                        
+        </div>
+    </div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

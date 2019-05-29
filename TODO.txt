@@ -1,0 +1,12 @@
+TODO
+====
+
+guía de trabajo en comisión (para que alumn@s sepan como manejarse)
+
+habilitar el botón de votación por comisiones
+
+región, distrito y escuela
+
+solucionar Desempate ejemplo 30% 30% 40%
+
+ver

@@ -1,0 +1,106 @@
+<div class="loading-spiner-holder" data-loading>
+  <div>
+    <img src="img/load.gif" />
+    <span>cargando...</span>
+  </div>
+</div>
+<div class="container-fluid">
+  <h1>Inicio</h1>
+
+  <h5>Bienvenido {{apellido}}, {{nombre}}</h5>
+  <br>
+  <!-- vista rol alumno -->
+  <div ng-show="role==0">
+    <h4>Acciones</h4>
+    <h4 class="small">Instancia {{instancia}}</h4>
+    <hr>
+    <div class="row">
+      <div class="col-sm-9">
+        <h4 ng-show="tieneVoto"><small>Votaste por</small> {{votastepor}}</h4>
+        <a ng-show="!tieneVoto" class="btn btn-default navbar-btn" role="button" ng-click="votar(id)"><span class="
+glyphicon glyphicon-thumbs-up"></span>&nbsp;Votar</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <h4 ng-show="es_postulante">Estás postulado para la elección</h4>
+        <a ng-show="!es_postulante" class="btn btn-default navbar-btn" role="button" ng-click="postular(id)"><span
+            class="glyphicon glyphicon-comment"></span>&nbsp;Postularme</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <a class="btn btn-default navbar-btn" role="button" href="#/estadisticas/0"><span
+            class="glyphicon glyphicon-flag"></span>&nbsp;Estadísticas</a>
+        <!-- <span>Todavía no puedes ver los resultados</span> -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <a class="btn btn-default navbar-btn" role="button" href="#/cronograma"><span
+            class="glyphicon glyphicon-bookmark"></span>&nbsp;Cronograma</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-9">
+        <a class="btn btn-default navbar-btn" role="button" href="#/guia_trabajo"><span
+            class="glyphicon glyphicon-book"></span>&nbsp;Guia
+          de Trabajo</a>
+      </div>
+    </div>
+
+    <p>&nbsp;</p>
+
+  </div>
+
+  <!-- vista rol coordinador -->
+  <div ng-show="role==2">
+    Menú coordinador
+  </div>
+  <!-- <br>
+  <div class="row">
+    <div class="col-sm-9">
+      <select ng-model="result.distrito"
+        ng-options="r.distrito as r.nombre for r in regiones | filter : filterByRegion({{region}})"
+        name="region" ng-change="cargarComisiones(result.distrito)"
+        class="form-control">
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <select ng-model="result.comision"
+        ng-options="c.comision as c.comision for c in comisiones" name="comision"
+        ng-change="" class="form-control">
+      </select>
+    </div>
+  </div>
+  <div>
+    <button>activar votación</button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-condensed">
+      <thead>
+        <th>Distrito&nbsp;</th>
+        <th>Habilitar&nbsp;</th>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat="data in regiones | filter : filterByRegion({{nombre}}" repeat-end="onEnd()">
+          <td>
+            <div>{{data.nombre}}</div>
+          </td>
+          <td>
+            -->
+            <!-- {{data.comision}} -->
+          <!-- </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div>
+  <pre>{{result | json}}</pre>
+</div> --> 
+</div>
